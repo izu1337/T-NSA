@@ -1,6 +1,6 @@
 # Projet : Configuration d'une Infrastructure Réseau et Serveur
 
-- Description du projet :
+### Description du projet :
 
 Ce projet consiste à configurer une infrastructure réseau composée de 4 machines virtuelles connectées entre elles dans des réseaux privés. Les machines communiquent via un serveur passerelle basé sur OpenBSD pour gérer le trafic et assurer l'accès Internet aux clients internes. Un serveur web est configuré pour héberger des pages web et fournir une base de données MySQL.
 
@@ -9,7 +9,7 @@ Ce projet consiste à configurer une infrastructure réseau composée de 4 machi
 ### VM 1 : Passerelle (OpenBSD 7.6)
 - Rôle : Serveur passerelle pour les réseaux internes.
 
-### Réseaux :
+**Réseaux** :
 
 - NAT : Pour permettre l'accès à Internet.
 
@@ -45,7 +45,6 @@ Services installés :
 - Adresse IP : Dynamique via DHCP.
 
 ### VM 4 : Machine Client Administrateur
-- Rôle : Administration du réseau et des services.
 - Adresse IP : Dynamique via DHCP.
 
 ## Instructions de Test
@@ -60,14 +59,12 @@ ping 192.168.42.1
 ```bash
 ping 8.8.8.8
 ```
-
-2. Test du Serveur Web (VM 2)
-Accéder au site web :Depuis un navigateur sur VM 3 ou VM 4, accédez à l'adresse :
+- Test du Serveur Web (VM 2)
+Accéder au site web : Depuis un navigateur sur la VM 3 ou 4, accédez à l'adresse :
 
 http://192.168.42.70
 
-Test de la base de données : Connexion à MySQL
-
+- Test de la base de données : Connexion à MySQL
 ```bash
 mysql -u root -p
 ```
